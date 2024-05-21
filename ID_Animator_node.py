@@ -173,8 +173,8 @@ class ID_Animator:
                                                           "bad proportions, extra limbs, cloned face, disfigured, gross proportions,"
                                                           " malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers,"
                                                           " too many fingers, long neck"}),
-                "clip_token_model":("CLIP_VISION",),
-                "clip_text_model":("CLIP_VISION",),
+                "clip_token_model":("CLIP",),
+                "clip_text_model":("CLIP",),
                 "vae_model":("VAE",),
                 "unet_model":("MODEL",),
                 "model_local_path": (paths,),
@@ -194,7 +194,7 @@ class ID_Animator:
     FUNCTION = "id_animator"
     CATEGORY = "ID_Animator"
 
-    def load_model(self, inference_config, clip_token_model, clip_text_model, vae_model, unet_model, scheduler, id_ckpt, image_encoder_path, dreambooth_model_path,
+    def load_model(self, inference_config, tokenizer, text_encoder, vae, unet, scheduler, id_ckpt, image_encoder_path, dreambooth_model_path,
                    motion_module_path):
 
         inference_config = OmegaConf.load(inference_config)
