@@ -173,9 +173,9 @@ class ID_Animator:
                                                           "bad proportions, extra limbs, cloned face, disfigured, gross proportions,"
                                                           " malformed limbs, missing arms, missing legs, extra arms, extra legs, fused fingers,"
                                                           " too many fingers, long neck"}),
-                "clip_token_model":("MODEL",),
+                "clip_token_model":("CLIP",),
                 "clip_text_model":("MODEL",),
-                "vae_model":("MODEL",),
+                "vae_model":("VAE",),
                 "unet_model":("MODEL",),
                 "model_local_path": (paths,),
                 "scheduler": (scheduler_list,),
